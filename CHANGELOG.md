@@ -10,6 +10,12 @@ release during this time, including patch releases.
 
 ## [Unreleased]
 
+## [0.0.2] - 2026-11-20
+
+### Added
+
+- Fixed an issue where the `README` wasn't appearing on the crates registry.
+
 ## [0.0.1] - 2026-11-20
 
 ### Added
@@ -17,4 +23,5 @@ release during this time, including patch releases.
 - Published the initial version of the crate.
 
 [Unreleased]: https://github.com/sigseis/error-kind/compare/v0.0.1...HEAD
+[0.0.2]: https://github.com/sigseis/error-kind/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/sigseis/error-kind/releases/tag/v0.0.1

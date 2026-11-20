@@ -18,11 +18,11 @@ edition = "2024"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/sigseis/error-kind"
-version = "0.0.1"
+version = "0.0.2"
 
 # ------------------------------------------------------------------------------
 [workspace.dependencies]
-error-kind-macros = { path = "error-kind-macros", version = "0.0.1"}
+error-kind-macros = { path = "error-kind-macros", version = "0.0.2"}
 proc-macro2 = "1"
 quote = "1"
 syn = "2"
