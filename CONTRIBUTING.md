@@ -1,0 +1,79 @@
+# Contributing to `error-kind`
+
+This project welcomes contributions from everyone in the form of suggestions, bug reports, pull requests, and feedback.
+
+## Submitting Bug Reports & Feature Requests
+
+When submitting a bug report or feature request, please use the GitHub Issues board.
+
+If the issue is a `bug`, please provide as much detail for your issue as possible, specifically include what you expected, what happened, and why that was counter to your expectation.
+
+If possible, please also provide a minimal sample reproduction of the bug. Ideally your code sample would be in the form of a small codeblock, as if it would be a unit test that would not pass currently (does not have to compile, just a rough "a bug of this form" kind of thing). For some tips on how to approach this, read about how to produce a [Minimal, Complete, and Verifiable example](https://stackoverflow.com/help/minimal-reproducible-example).
+
+If the issue is a `feature`, and if it is not obvious, provide some justification for why this feature should be added. For example, why was it a burden that this feature was not implemented within this project? Why is this problem general enough to be here and not in a user's crate? etc.
+
+If the issue is `documentation`, pointing to the file in question, and the relevant information to locate the issue would be nice. But if it's just a general issue with documentation, or if it impacts many files, this is not required.
+
+## Submitting a Pull Request
+
+Before working on a pull request, please read this:
+
+- **No pull request will even be considered if it didn't originate from a triaged issue!**
+- **If a work item is already assigned that means someone is already working on it - do not steal work items!**
+
+This is to avoid having others do a bunch of work all for us to say "no, thank you".
+
+### Testing Your Change
+
+While working on your change, you can test it along the way with:
+
+```shell
+cargo test --all-features
+```
+
+This is fine during active development, but when you think you're ready to create a pull request, you should run a more comprehensive command.
+
+First, you will need to install dependencies (this only needs done once per system):
+
+```shell
+cargo install cargo-docs-rs
+cargo install cargo-hack
+```
+
+Then, you can run this script (this may take some time):
+
+```shell
+./scripts/test.sh
+```
+
+### Testing Coverage
+
+We like to use [`tarpaulin`](https://github.com/xd009642/tarpaulin) for code coverage.
+
+You can install tarpaulin via:
+
+```bash
+cargo install tarpaulin
+```
+
+Then you can run the coverage testing via:
+
+```shell
+./scripts/coverage.sh
+```
+
+After running your tests, you can find the HTML output at `${TARGET}/tarpaulin-report.html`.
+
+### Publishing a New Version
+
+Releases can be published by using the following script:
+
+```shell
+./scripts/release.sh --dry-run
+```
+
+Fix any issues that have arisen, then...
+
+```shell
+./scripts/release.sh
+```

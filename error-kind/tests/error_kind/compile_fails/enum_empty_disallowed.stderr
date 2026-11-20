@@ -1,0 +1,7 @@
+error: #[derive(ErrorKind)]: cannot derive on an empty enum
+  --> tests/error_kind/compile_fails/enum_empty_disallowed.rs:13:10
+   |
+13 | #[derive(ErrorKind)]
+   |          ^^^^^^^^^
+   |
+   = note: this error originates in the derive macro `ErrorKind` (in Nightly builds, run with -Z macro-backtrace for more info)

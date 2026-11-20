@@ -1,0 +1,5 @@
+error: #[derive(ErrorDomain)]: error domains must be enums consisting solely of variants with a single unnamed `ErrorKind` field
+  --> tests/error_domain/compile_fails/enum_named_disallowed.rs:15:13
+   |
+15 |     Variant {},
+   |             ^^

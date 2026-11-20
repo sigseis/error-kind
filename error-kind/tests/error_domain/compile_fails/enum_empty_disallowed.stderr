@@ -1,0 +1,7 @@
+error: #[derive(ErrorDomain)]: cannot derive on an empty enum
+  --> tests/error_domain/compile_fails/enum_empty_disallowed.rs:13:10
+   |
+13 | #[derive(ErrorDomain)]
+   |          ^^^^^^^^^^^
+   |
+   = note: this error originates in the derive macro `ErrorDomain` (in Nightly builds, run with -Z macro-backtrace for more info)

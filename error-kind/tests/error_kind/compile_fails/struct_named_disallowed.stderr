@@ -1,0 +1,8 @@
+error: #[derive(ErrorKind)]: structs are not allowed
+       only enum types are allowed for `ErrorKind`
+  --> tests/error_kind/compile_fails/struct_named_disallowed.rs:13:10
+   |
+13 | #[derive(ErrorKind)]
+   |          ^^^^^^^^^
+   |
+   = note: this error originates in the derive macro `ErrorKind` (in Nightly builds, run with -Z macro-backtrace for more info)

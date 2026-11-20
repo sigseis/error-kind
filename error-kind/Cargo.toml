@@ -1,0 +1,73 @@
+# ==============================================================================
+# CONFIGURATION (https://doc.rust-lang.org/cargo/reference/manifest.html)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+[package]
+name = "error-kind"
+authors.workspace = true
+categories = ["rust-patterns", "no-std"]
+description = "Separate `Error` from `ErrorKind` with convenient derive macros!"
+documentation.workspace = true
+edition.workspace = true
+keywords = ["error", "error-handling", "derive"]
+license.workspace = true
+repository.workspace = true
+version.workspace = true
+
+# ------------------------------------------------------------------------------
+[package.metadata.docs.rs]
+all-features = true
+
+# ------------------------------------------------------------------------------
+[dependencies]
+error-kind-macros = { workspace = true, optional = true }
+
+# ------------------------------------------------------------------------------
+[dev-dependencies]
+trybuild = "1"
+
+# ------------------------------------------------------------------------------
+[lints]
+workspace = true
+
+# ==============================================================================
+# FEATURES
+# ==============================================================================
+[features]
+
+# ------------------------------------------------------------------------------
+default = ["macros"]
+
+# ------------------------------------------------------------------------------
+alloc = []
+backtrace = ["alloc"]
+macros = ["dep:error-kind-macros"]
+
+# ==============================================================================
+# TESTS
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+[[test]]
+name = "err"
+path = "tests/err/tests.rs"
+required-features = ["alloc", "macros"]
+
+# ------------------------------------------------------------------------------
+[[test]]
+name = "error"
+path = "tests/error/tests.rs"
+required-features = ["alloc", "macros"]
+
+# ------------------------------------------------------------------------------
+[[test]]
+name = "error_domain"
+path = "tests/error_domain/tests.rs"
+required-features = ["alloc", "macros"]
+
+# ------------------------------------------------------------------------------
+[[test]]
+name = "error_kind"
+path = "tests/error_kind/tests.rs"
+required-features = ["alloc", "macros"]

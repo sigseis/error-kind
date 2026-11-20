@@ -1,0 +1,7 @@
+error: #[derive(Error)]: since there's multiple fields, one must have the #[error_kind] attribute set
+  --> tests/error/compile_fails/struct_named_unattributed_disallowed.rs:15:10
+   |
+15 | #[derive(Error)]
+   |          ^^^^^
+   |
+   = note: this error originates in the derive macro `Error` (in Nightly builds, run with -Z macro-backtrace for more info)

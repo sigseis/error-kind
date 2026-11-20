@@ -1,0 +1,5 @@
+error: #[derive(ErrorKind)]: more than one #[error] attribute found on the same variant
+  --> tests/error_domain/compile_fails/enum_unnamed_error_multi_disallowed.rs:16:5
+   |
+16 |     #[error("second")]
+   |     ^

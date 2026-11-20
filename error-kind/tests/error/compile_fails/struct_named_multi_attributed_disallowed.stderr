@@ -1,0 +1,5 @@
+error: #[derive(Error)]: only one field may have the #[error_kind] attribute set
+  --> tests/error/compile_fails/struct_named_multi_attributed_disallowed.rs:19:5
+   |
+19 |     #[error_kind]
+   |     ^

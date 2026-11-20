@@ -1,0 +1,5 @@
+error: #[derive(ErrorDomain)]: unnamed variants must have exactly 1 field (the wrapped error kind)
+  --> tests/error_domain/compile_fails/enum_unnamed_empty_disallowed.rs:15:12
+   |
+15 |     Variant(),
+   |            ^^

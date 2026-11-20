@@ -1,0 +1,11 @@
+error: #[derive(Error)]: the #[error_kind] attribute is intended for use on struct fields
+  --> tests/error/compile_fails/struct_named_unexpected_attributes_disallowed.rs:16:1
+   |
+16 | #[error_kind]
+   | ^
+
+error: #[derive(Error)]: the #[error] attribute is intended for use on struct item
+  --> tests/error/compile_fails/struct_named_unexpected_attributes_disallowed.rs:26:5
+   |
+26 |     #[error("example")]
+   |     ^

@@ -1,0 +1,5 @@
+error: #[derive(ErrorKind)]: currently, non-unit types are not supported for `ErrorKind`
+  --> tests/error_kind/compile_fails/enum_named_disallowed.rs:15:13
+   |
+15 |     Variant {},
+   |             ^^

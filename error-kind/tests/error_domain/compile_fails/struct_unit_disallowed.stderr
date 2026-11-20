@@ -1,0 +1,8 @@
+error: #[derive(ErrorDomain)]: structs are not allowed
+       only enum types are allowed for `ErrorDomain`
+  --> tests/error_domain/compile_fails/struct_unit_disallowed.rs:13:10
+   |
+13 | #[derive(ErrorDomain)]
+   |          ^^^^^^^^^^^
+   |
+   = note: this error originates in the derive macro `ErrorDomain` (in Nightly builds, run with -Z macro-backtrace for more info)

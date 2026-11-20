@@ -1,0 +1,7 @@
+error: #[derive(Error)]: enums are not allowed (only structs are allowed for `Error`)
+  --> tests/error/compile_fails/enum_disallowed.rs:13:24
+   |
+13 | #[derive(Clone, Debug, Error)]
+   |                        ^^^^^
+   |
+   = note: this error originates in the derive macro `Error` (in Nightly builds, run with -Z macro-backtrace for more info)
