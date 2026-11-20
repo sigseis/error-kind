@@ -12,6 +12,7 @@ documentation.workspace = true
 edition.workspace = true
 keywords = ["error", "error-handling", "derive"]
 license.workspace = true
+readme.workspace = true
 repository.workspace = true
 version.workspace = true
 

@@ -16,6 +16,7 @@ authors = ["Sigseis <sigseis@protonmail.com>"]
 documentation = "https://docs.rs/error-kind"
 edition = "2024"
 license = "MIT OR Apache-2.0"
+readme = "README.md"
 repository = "https://github.com/sigseis/error-kind"
 version = "0.0.1"
 
